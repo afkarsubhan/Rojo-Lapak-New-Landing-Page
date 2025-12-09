@@ -1,0 +1,5 @@
+# Prevent search engines from indexing this site
+# This keeps your site unlisted but accessible via direct link
+
+User-agent: *
+Disallow: /
