@@ -3,120 +3,14 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 import { Search } from "lucide-react";
-
-const products = [
-    {
-        title: "Netflix",
-        description: "Nonton film dan series favorit tanpa batas dengan kualitas terbaik.",
-        category: "Movie",
-        variants: [
-            { name: "1 Bulan (HP/Tablet)", price: 42500, originalPrice: 50000 },
-            { name: "1 Bulan (Smart TV)", price: 55000, originalPrice: 60000 },
-            { name: "Sharing 1 Bulan (Smart TV)", price: 60000 },
-            { name: "Sharing 2 Bulan (Non-Smart TV)", price: 85000 },
-        ],
-    },
-    {
-        title: "Spotify",
-        description: "Dengarkan musik tanpa iklan dengan kualitas audio tinggi.",
-        category: "Music",
-        variants: [
-            { name: "1 Bulan (Individual)", price: 32400, originalPrice: 35000 },
-            { name: "2 Bulan (Individual)", price: 85000 },
-        ],
-    },
-    {
-        title: "YouTube Premium",
-        description: "Nonton video tanpa iklan dan putar di latar belakang.",
-        category: "Music",
-        variants: [
-            { name: "1 Bulan", price: 37830, originalPrice: 39000 },
-        ],
-    },
-    {
-        title: "Disney+ Hotstar",
-        description: "Film dan series terbaik dari Disney, Marvel, Star Wars, dan lainnya.",
-        category: "Movie",
-        variants: [
-            { name: "1 Bulan (Semua Perangkat)", price: 27000, originalPrice: 30000 },
-            { name: "3 Bulan (Semua Perangkat)", price: 95000 },
-        ],
-    },
-    {
-        title: "Prime Video",
-        description: "Nikmati konten eksklusif Amazon Originals dan film populer.",
-        category: "Movie",
-        variants: [
-            { name: "1 Bulan (Semua Perangkat)", price: 21250, originalPrice: 30000 },
-            { name: "2 Bulan (Semua Perangkat)", price: 56000 },
-        ],
-    },
-    {
-        title: "Vidio",
-        description: "Streaming olahraga, sinetron, dan film Indonesia terlengkap.",
-        category: "Movie",
-        variants: [
-            { name: "Platinum 1 Bulan", price: 25000 },
-            { name: "Diamond (EPL) 1 Bulan", price: 169750, originalPrice: 175000 },
-        ],
-    },
-    {
-        title: "WeTV",
-        description: "Drama Asia terbaik, anime, dan variety show.",
-        category: "Movie",
-        variants: [
-            { name: "3 Bulan (Semua Perangkat)", price: 42000 },
-        ],
-    },
-    {
-        title: "Viu",
-        description: "Drama Korea, Variety Show, dan film Asia terbaru.",
-        category: "Movie",
-        variants: [
-            { name: "1 Bulan (Semua Perangkat)", price: 9600, originalPrice: 12000 },
-        ],
-    },
-    {
-        title: "Canva Pro",
-        description: "Desain grafis mudah dengan ribuan template premium.",
-        category: "Tools",
-        variants: [
-            { name: "3 Bulan", price: 35000 },
-        ],
-    },
-    {
-        title: "CapCut Pro",
-        description: "Edit video profesional dengan fitur premium.",
-        category: "Tools",
-        variants: [
-            { name: "1 Bulan", price: 50000 },
-        ],
-    },
-    {
-        title: "HBO GO",
-        description: "Film blockbuster dan serial HBO Original terbaik.",
-        category: "Movie",
-        variants: [
-            { name: "1 Bulan", price: 33250, originalPrice: 35000 },
-        ],
-    },
-    {
-        title: "Catchplay+",
-        description: "Film terbaru dari bioskop dan series eksklusif.",
-        category: "Movie",
-        variants: [
-            { name: "1 Bulan", price: 20000, originalPrice: 25000 },
-        ],
-    },
-];
+import productsData from "@/data/products.json";
 
 const categories = ["All", "Movie", "Music", "Tools"];
-
 export default function ProductSection() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All");
 
-    const filteredProducts = products.filter((product) => {
+    const filteredProducts = productsData.filter((product) => {
         const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase());
         const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
         return matchesSearch && matchesCategory;
@@ -155,8 +49,8 @@ export default function ProductSection() {
                                 key={category}
                                 onClick={() => setSelectedCategory(category)}
                                 className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${selectedCategory === category
-                                        ? "bg-[#E50914] text-white"
-                                        : "bg-white text-gray-700 hover:bg-gray-100 ring-1 ring-gray-200"
+                                    ? "bg-[#E50914] text-white"
+                                    : "bg-white text-gray-700 hover:bg-gray-100 ring-1 ring-gray-200"
                                     }`}
                             >
                                 {category}
@@ -173,6 +67,7 @@ export default function ProductSection() {
                             description={product.description}
                             category={product.category}
                             variants={product.variants}
+                            bestseller={product.terlaris}
                         />
                     ))}
                 </div>

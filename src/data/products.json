@@ -1,0 +1,184 @@
+[
+    {
+        "title": "Netflix",
+        "description": "Nonton ribuan film, series, dan dokumenter Netflix Originals tanpa batas dengan kualitas HD hingga Ultra HD 4K.",
+        "category": "Movie",
+        "terlaris": true,
+        "variants": [
+            {
+                "name": "1 Bulan (HP/Tablet)",
+                "price": 42500,
+                "originalPrice": 50000
+            },
+            {
+                "name": "1 Bulan (Smart TV)",
+                "price": 55000,
+                "originalPrice": 60000
+            },
+            {
+                "name": "Sharing 1 Bulan (Smart TV)",
+                "price": 60000
+            },
+            {
+                "name": "Sharing 2 Bulan (Non-Smart TV)",
+                "price": 85000
+            }
+        ]
+    },
+    {
+        "title": "Spotify",
+        "description": "Dengarkan jutaan lagu, podcast, dan album tanpa iklan dengan fitur skip tak terbatas dan kualitas audio Hi-Fi (jika tersedia).",
+        "category": "Music",
+        "terlaris": true,
+        "variants": [
+            {
+                "name": "1 Bulan (Individual)",
+                "price": 32400,
+                "originalPrice": 35000
+            },
+            {
+                "name": "2 Bulan (Individual)",
+                "price": 85000
+            }
+        ]
+    },
+    {
+        "title": "YouTube Premium",
+        "description": "Nonton video tanpa jeda iklan, putar di latar belakang (background play), dan akses YouTube Music Premium.",
+        "category": "Music",
+        "terlaris": true,
+        "variants": [
+            {
+                "name": "1 Bulan",
+                "price": 37830,
+                "originalPrice": 39000
+            }
+        ]
+    },
+    {
+        "title": "Disney+ Hotstar",
+        "description": "Tonton film dan series eksklusif dari Disney, Marvel, Star Wars, Pixar, National Geographic, dan konten lokal Indonesia.",
+        "category": "Movie",
+        "terlaris": true,
+        "variants": [
+            {
+                "name": "1 Bulan (Semua Perangkat)",
+                "price": 27000,
+                "originalPrice": 30000
+            },
+            {
+                "name": "3 Bulan (Semua Perangkat)",
+                "price": 95000
+            }
+        ]
+    },
+    {
+        "title": "Prime Video",
+        "description": "Nikmati konten eksklusif Amazon Originals, film Hollywood, dan serial populer dengan kualitas streaming premium.",
+        "category": "Movie",
+        "terlaris": false,
+        "variants": [
+            {
+                "name": "1 Bulan (Semua Perangkat)",
+                "price": 21250,
+                "originalPrice": 30000
+            },
+            {
+                "name": "2 Bulan (Semua Perangkat)",
+                "price": 56000
+            }
+        ]
+    },
+    {
+        "title": "Vidio",
+        "description": "Streaming olahraga (EPL, UCL), sinetron, film Indonesia, dan ribuan tayangan lokal serta internasional terlengkap.",
+        "category": "Movie",
+        "terlaris": false,
+        "variants": [
+            {
+                "name": "Platinum 1 Bulan",
+                "price": 25000
+            },
+            {
+                "name": "Diamond (EPL) 1 Bulan",
+                "price": 169750,
+                "originalPrice": 175000
+            }
+        ]
+    },
+    {
+        "title": "WeTV",
+        "description": "Tonton drama Asia terbaik (China, Thailand), anime, dan variety show eksklusif dengan tayangan VIP lebih awal.",
+        "category": "Movie",
+        "terlaris": false,
+        "variants": [
+            {
+                "name": "3 Bulan (Semua Perangkat)",
+                "price": 42000
+            }
+        ]
+    },
+    {
+        "title": "Viu",
+        "description": "Koleksi lengkap Drama Korea, Variety Show, dan film Asia terbaru yang tayang cepat dan legal.",
+        "category": "Movie",
+        "terlaris": false,
+        "variants": [
+            {
+                "name": "1 Bulan (Semua Perangkat)",
+                "price": 9600,
+                "originalPrice": 12000
+            }
+        ]
+    },
+    {
+        "title": "Canva Pro",
+        "description": "Alat desain grafis all-in-one dengan ribuan template premium, fitur Hapus Latar Belakang, dan font eksklusif.",
+        "category": "Tools",
+        "terlaris": true,
+        "variants": [
+            {
+                "name": "3 Bulan",
+                "price": 35000
+            }
+        ]
+    },
+    {
+        "title": "CapCut Pro",
+        "description": "Edit video profesional dengan transisi, filter, dan efek premium tak terbatas untuk konten media sosial.",
+        "category": "Tools",
+        "terlaris": false,
+        "variants": [
+            {
+                "name": "1 Bulan",
+                "price": 50000
+            }
+        ]
+    },
+    {
+        "title": "HBO GO",
+        "description": "Film blockbuster Hollywood, series ikonik HBO Original (seperti Game of Thrones), dan tayangan Warner Bros.",
+        "category": "Movie",
+        "terlaris": false,
+        "variants": [
+            {
+                "name": "1 Bulan",
+                "price": 33250,
+                "originalPrice": 35000
+            }
+        ]
+    },
+    {
+        "title": "Catchplay+",
+        "description": "Film-film box office terbaru dari bioskop dan series eksklusif yang bisa ditonton di berbagai perangkat.",
+        "category": "Movie",
+        "terlaris": false,
+        "variants": [
+            {
+                "name": "1 Bulan",
+                "price": 20000,
+                "originalPrice": 25000
+            }
+        ]
+    }
+]

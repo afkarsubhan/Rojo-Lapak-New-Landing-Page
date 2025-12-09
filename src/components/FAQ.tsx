@@ -6,25 +6,34 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 const faqs = [
     {
         question: "Apakah layanan ini aman dan legal?",
-        answer: "Tentu saja aman, semua akun yang kita jual FULL GARANSI, AMAN, DAN LEGAL. Karena kita juga membeli dari website resminya. Jadi jangan khawatir kalau akun yang kita jual bermasalah karena kita pasti mempertanggung jawabkan.",
+        answer: "Layanan kami **sangat aman dan legal**. Semua akun yang kami jual bergaransi penuh karena kami membelinya langsung dari website atau penyedia resmi. Anda tidak perlu khawatir jika terjadi masalah, karena kami pasti akan bertanggung jawab penuh.",
     },
     {
-        question: "Kalau sharing berarti dipakai bareng sama customer lain?",
-        answer: "Jadi 1 akun netflix itu ada 5 profile, nah yang dimaksud disini sharing adalah nanti setiap customer masing-masing punya 1 profile, jadi nggak usah khawatir deh.",
+        question: "Apakah 'sharing' berarti akun digunakan bersama dengan pelanggan lain?",
+        answer: "Ya, sistem *sharing* berarti Anda berbagi satu akun dengan pelanggan lain, namun Anda akan mendapatkan **satu profil pribadi** khusus dalam akun tersebut (contoh: satu akun Netflix memiliki lima profil). Dengan demikian, privasi dan riwayat tontonan Anda akan tetap terjaga.",
     },
     {
-        question: "Akunnya Bisa di pakai di device apa aja kak?",
-        answer: "Semua akun yang kita jual bisa dipakai di ALL Device. Jadi bisa di pakai di Smart TV, Smartphones, Tablets, PC, Laptops, Game Console, SettopBoxes, dll.",
+        question: "Perangkat apa saja yang bisa digunakan untuk mengakses akun?",
+        answer: "Semua akun yang kami jual **dapat digunakan di berbagai jenis perangkat** (*All Device*). Anda bisa menggunakannya di *Smart TV, smartphone, tablet, PC/laptop, konsol game, set-top box, dan lain-lain*.",
     },
     {
-        question: "Pembayaran bisa via apa aja kak?",
-        answer: "Kita ada pembayaran via BCA, DANA, OVO, GOPAY.",
+        question: "Metode pembayaran apa saja yang tersedia?",
+        answer: "Kami menerima pembayaran melalui **transfer bank (BCA)** dan **dompet digital** seperti **DANA, OVO, GOPAY, dan QRIS**.",
     },
     {
-        question: "Kenapa harganya bisa lebih murah dari pada di website resmi?",
-        answer: "Karena kami menggunakan sistem Family Plan atau paket bundling khusus yang memungkinkan pembagian biaya langganan, sehingga jauh lebih hemat untuk setiap pengguna.",
+        question: "Mengapa harga langganan bisa lebih murah dibandingkan website resmi?",
+        answer: "Harga kami lebih terjangkau karena kami memanfaatkan **sistem *Family Plan* atau paket *bundling*** khusus yang disediakan oleh penyedia layanan. Sistem ini memungkinkan adanya pembagian biaya langganan, sehingga jauh lebih hemat untuk setiap pengguna.",
     },
 ];
+
+// Helper function to parse markdown-style bold markers
+const parseMarkdown = (text: string): string => {
+    // Replace **text** with <strong>text</strong>
+    let parsed = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    // Replace *text* with <strong>text</strong> (but not if already inside **)
+    parsed = parsed.replace(/(?<!\*)\*(?!\*)(.+?)\*(?!\*)/g, '<strong>$1</strong>');
+    return parsed;
+};
 
 export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -54,9 +63,10 @@ export default function FAQ() {
                                 )}
                             </button>
                             {openIndex === index && (
-                                <div className="px-6 pb-4 text-gray-600">
-                                    {faq.answer}
-                                </div>
+                                <div
+                                    className="px-6 pb-4 text-gray-600"
+                                    dangerouslySetInnerHTML={{ __html: parseMarkdown(faq.answer) }}
+                                />
                             )}
                         </div>
                     ))}
