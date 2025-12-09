@@ -16,7 +16,7 @@ export default function Home() {
       <div id="features"><Features /></div>
       <div id="promo"><PromoBoard /></div>
       <div id="products"><ProductSection /></div>
-      <div id="testimoni"><Testimonials /></div>
+      {/* <div id="testimoni"><Testimonials /></div> */}
       <div id="faq"><FAQ /></div>
       <div id="how-to-order"><HowToOrder /></div>
       <Footer />
